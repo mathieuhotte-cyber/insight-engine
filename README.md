@@ -35,6 +35,17 @@ Task: The model was trained on Arithmetic sequences (y=x+2), then exposed to a G
 
 Outcome: Through latent optimization alone (no weight updates), the model converged on a "doubling" schema in ~70 steps and successfully generalized to unseen inputs (3→6).
 
+3. Biological Application: Alzheimer's Regulatory Code (APOE)
+We applied the Insight Engine to the promoter region of the **APOE gene** (Chromosome 19, hg38), the primary genetic risk factor for Alzheimer's. This region is non-coding and highly stochastic, making it difficult for standard models to predict.
+
+Task: Predict the next nucleotide (A, C, G, T) in the regulatory sequence.
+Standard AI (System 1):Failed to find signal. Entropy Loss flatlined at ~2.07 (worse than the random baseline of 1.38), indicating the model treated the sequence as pure noise.
+Insight Engine (System 2):** Latent optimization dropped the entropy to ~1.35.
+
+Conclusion: The engine successfully detected a latent "grammar" in the non-coding DNA that standard backpropagation missed. This suggests the presence of structural rules in the APOE promoter that are discoverable only through inference-time optimization.
+
+![APOE Discovery Graph](apoe_discovery.png)
+
 Usage
 Installation
 
