@@ -40,7 +40,7 @@ We applied the Insight Engine to the promoter region of the **APOE gene** (Chrom
 
 Task: Predict the next nucleotide (A, C, G, T) in the regulatory sequence.
 Standard AI (System 1):Failed to find signal. Entropy Loss flatlined at ~2.07 (worse than the random baseline of 1.38), indicating the model treated the sequence as pure noise.
-Insight Engine (System 2):** Latent optimization dropped the entropy to ~1.35.
+Insight Engine (System 2): Latent optimization dropped the entropy to ~1.35.
 
 Conclusion: The engine successfully detected a latent "grammar" in the non-coding DNA that standard backpropagation missed. This suggests the presence of structural rules in the APOE promoter that are discoverable only through inference-time optimization.
 
